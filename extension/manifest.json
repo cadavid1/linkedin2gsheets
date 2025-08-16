@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn to Google Sheets Exporter",
+  "version": "2.1.0",
+  "description": "Export your LinkedIn saved posts to Google Sheets with one click",
+  
+  "permissions": [
+    "identity",
+    "storage",
+    "activeTab",
+    "scripting",
+    "webNavigation"
+  ],
+  
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
+  
+  "oauth2": {
+    "client_id": "648372260312-qecpn2r7dcmm9dicim7efgni6duhk2qh.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Export LinkedIn Saved Posts"
+  }
+}
